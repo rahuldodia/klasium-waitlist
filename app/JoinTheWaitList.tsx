@@ -15,7 +15,7 @@ export default function JoinTheWaitlist() {
 
         const raw = JSON.stringify(details);
 
-        fetch(`${process.env.NEXT_PULIC_HOST_URL}/api/waitlist`, {
+        fetch("/api/waitlist", {
             method: "POST",
             headers: myHeaders,
             body: raw,
