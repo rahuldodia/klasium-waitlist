@@ -5,7 +5,8 @@ import "./global.css";
 
 export const metadata = {
     title: "Klasium",
-    description: "",
+    description:
+        "A modern-day ed-tech company that simplifies education with technology.",
 };
 
 export default function RootLayout({
