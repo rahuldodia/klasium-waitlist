@@ -106,7 +106,7 @@ export default function JoinTheWaitlist() {
                     emailError ? "" : "hidden"
                 } text-[#E55C5C] text-left w-full`}
             >
-                *Please enter email
+                * Please enter email
             </div>
             <button
                 className="mt-12 rounded-md border border-green bg-green px-4 py-3 text-base font-medium text-white transition duration-100 hover:bg-white hover:text-green"
