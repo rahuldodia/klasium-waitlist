@@ -24,6 +24,7 @@ export async function POST(request: Request) {
         });
         return Response.json({ message: "Submitted Successfully" });
     } catch (error) {
+        console.log(error);
         return Response.json(
             { message: "Error" },
             {

@@ -1,24 +1,31 @@
 "use client";
 
+import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
 
 const Links = ({ pathname }: { pathname: string }) => (
     <>
-        <div
-            className={`${
-                pathname === "/" ? "underline underline-offset-4" : ""
-            }`}
-        >
-            Home
-        </div>
-        <div
-            className={`${
-                pathname === "/mission" ? "underline underline-offset-4" : ""
-            }`}
-        >
-            Mission
-        </div>
+        <Link href="/">
+            <div
+                className={`md:text-xl ${
+                    pathname === "/" ? "underline underline-offset-4" : ""
+                }`}
+            >
+                Home
+            </div>
+        </Link>
+        <Link href="/mission">
+            <div
+                className={`md:text-xl ${
+                    pathname === "/mission"
+                        ? "underline underline-offset-4"
+                        : ""
+                }`}
+            >
+                Mission
+            </div>
+        </Link>
     </>
 );
 
@@ -39,7 +46,7 @@ export default function Header() {
                     viewBox="0 0 24 24"
                     strokeWidth="1.5"
                     stroke="currentColor"
-                    className="absolute top-10 right-10 w-8 h-8"
+                    className="absolute top-10 right-10 w-8 h-8 cursor-pointer"
                     onClick={() => setIsOpen(false)}
                 >
                     <path
@@ -60,7 +67,7 @@ export default function Header() {
                     viewBox="0 0 24 24"
                     strokeWidth="1.5"
                     stroke="currentColor"
-                    className="w-8 h-8 md:hidden"
+                    className="w-8 h-8 md:hidden cursor-pointer"
                     onClick={() => setIsOpen(true)}
                 >
                     <path

@@ -8,6 +8,9 @@ const config: Config = {
     ],
     theme: {
         extend: {
+            fontFamily: {
+                interface: ["Inter", "sans-serif"],
+            },
             screens: {
                 "3xl": "1600px",
                 "4xl": "1920px",
@@ -20,6 +23,7 @@ const config: Config = {
                     dark: "#061D73",
                 },
                 secondary: "#7B8092",
+                green: "#13BF5D",
             },
         },
     },
