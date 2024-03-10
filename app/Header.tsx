@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const Links = ({ pathname }: { pathname: string }) => (
     <>
@@ -32,6 +32,8 @@ const Links = ({ pathname }: { pathname: string }) => (
 export default function Header() {
     const [isOpen, setIsOpen] = useState(false);
     const pathname = usePathname();
+
+    useEffect(() => setIsOpen(false), [pathname]);
 
     return (
         <div className="text-3xl text-primary-light">
