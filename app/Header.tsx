@@ -60,9 +60,9 @@ export default function Header() {
                 <Links pathname={pathname} />
             </div>
             <div className="flex w-full justify-between p-10">
-                <div>
+                <Link href={"/"}>
                     <span className="absolute z-50">Klasium</span>
-                </div>
+                </Link>
                 <svg
                     xmlns="http://www.w3.org/2000/svg"
                     fill="none"
